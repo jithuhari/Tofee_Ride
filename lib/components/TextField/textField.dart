@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
 
-class CustomTextField extends StatelessWidget {
+class CustomTextField extends StatefulWidget {
 
   CustomTextField({
     this.hintText,
-    this.controller
+    this.controller,
+    this.typeofKB,
+    this.mxlength,
+    this.validator
   });
 
   final String hintText;
   final TextEditingController controller;
+  final TextInputType typeofKB;
+  final int mxlength;
+  final Function validator;
+  @override
+  _CustomTextFieldState createState() => _CustomTextFieldState();
+}
 
+class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,11 +33,15 @@ class CustomTextField extends StatelessWidget {
                                   ),
 
       child: TextFormField(
+  
         
-          controller: controller,
-          
+          validator: widget.validator,
+          textAlign: TextAlign.center,
+          keyboardType: widget.typeofKB,
+          controller: widget.controller,
+          maxLength: widget.mxlength,
           decoration: InputDecoration(
-          hintText:null==hintText ? '' : hintText,
+          hintText:null==widget.hintText ? '' : widget.hintText,
           filled: true,
           fillColor:Colors.white ,
 

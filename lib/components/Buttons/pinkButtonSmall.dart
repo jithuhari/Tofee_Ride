@@ -14,13 +14,13 @@ class PinkButtonSmall extends StatefulWidget {
 
 class _PinkButtonSmallState extends State<PinkButtonSmall> {
 
-   bool changeColor = false;
+   
 
   @override
   Widget build(BuildContext context) {
     return Container(
       
-      color: widget.color,
+      color: null,
       margin: EdgeInsets.fromLTRB(
                                   MediaQuery.of(context).size.width/4.5,
                                   0,
@@ -35,7 +35,7 @@ class _PinkButtonSmallState extends State<PinkButtonSmall> {
                 
                 child: RaisedButton(
               
-                color:!changeColor ?  Colors.pink :Colors.greenAccent[400],
+                color:widget.color,
   
                 onPressed: widget.onPress,
   

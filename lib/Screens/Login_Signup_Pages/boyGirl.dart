@@ -3,8 +3,11 @@ import 'package:FlutterNewApp/components/Buttons/pinkButtonSmall.dart';
 
 class BoyGirlSelect extends StatefulWidget {
 
-  BoyGirlSelect({this.onPress});
+  BoyGirlSelect({this.onPress,this.onPress1,this.color1,this.color2});
   final Function onPress;
+  final Function onPress1;
+  final Color color1;
+  final Color color2;
 
   @override
   _BoyGirlSelectState createState() => _BoyGirlSelectState();
@@ -49,6 +52,7 @@ class _BoyGirlSelectState extends State<BoyGirlSelect> {
 
             Center(
               child: PinkButtonSmall(
+                color: widget.color1,
                 text: 'BOY',
                  onPress:widget.onPress,
               ),
@@ -62,8 +66,9 @@ class _BoyGirlSelectState extends State<BoyGirlSelect> {
 
             Center(
               child: PinkButtonSmall(
+                color: widget.color2,
                 text: 'GIRL',
-                 onPress:widget.onPress,
+                 onPress:widget.onPress1,
               ),
             ),
             

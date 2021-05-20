@@ -64,6 +64,8 @@ class _NumberLoginState extends State<NumberLogin> {
             ),
 
             CustomTextField(
+              mxlength: 10,
+              typeofKB: TextInputType.number,
               hintText: 'Enter Your Mobile Number',
             ),
 

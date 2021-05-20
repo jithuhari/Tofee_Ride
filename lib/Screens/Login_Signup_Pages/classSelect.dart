@@ -4,8 +4,25 @@ import 'package:FlutterNewApp/components/Buttons/pinkButtonSmall.dart';
 import 'package:flutter/material.dart';
 class ClassSelect extends StatefulWidget {
 
-  ClassSelect({this.onPress});
-  final Function onPress;
+  ClassSelect({
+    this.c1onPress,
+    this.c1color,
+    this.c2onPress,
+    this.c2color,
+    this.c3onPress,
+    this.c3color,
+    this.c4onPress
+    ,this.c4color
+    });
+    
+  final Function c1onPress;
+  final Color c1color;
+  final Function c2onPress;
+  final Color c2color;
+  final Function c3onPress;
+  final Color c3color;
+  final Function c4onPress;
+  final Color c4color;
    
   @override
   _ClassSelectState createState() => _ClassSelectState();
@@ -49,7 +66,8 @@ class _ClassSelectState extends State<ClassSelect> {
 
             Center(
               child: PinkButtonSmall(
-                onPress:widget.onPress,
+                color: widget.c1color,
+                onPress:widget.c1onPress,
                 text: 'Class 1',
                 
               ),
@@ -59,8 +77,8 @@ class _ClassSelectState extends State<ClassSelect> {
 
             Center(
               child: PinkButtonSmall(
-                onPress:widget.onPress,
-
+                onPress:widget.c2onPress,
+                 color: widget.c2color,
                 text: 'Class 2',
                 
               ),
@@ -70,8 +88,8 @@ class _ClassSelectState extends State<ClassSelect> {
 
             Center(
               child: PinkButtonSmall(
-                onPress:widget.onPress,
-
+                onPress:widget.c3onPress,
+                 color: widget.c3color,
                 text: 'Class 3',
                 
               ),
@@ -81,7 +99,8 @@ class _ClassSelectState extends State<ClassSelect> {
 
             Center(
               child: PinkButtonSmall(
-                onPress:widget.onPress,
+                onPress:widget.c4onPress,
+                 color: widget.c4color,
 
                 text: 'Class 4',
                 
